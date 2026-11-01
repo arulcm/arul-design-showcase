@@ -103,9 +103,9 @@ function Thermal() {
   const cells = [];
   for (let r = 0; r < 6; r++) {
     for (let c = 0; c < 8; c++) {
-      const heat = (Math.sin(r * 1.3 + c * 0.7) + 1) / 2;
+      const heat = Math.round(((Math.sin(r * 1.3 + c * 0.7) + 1) / 2) * 100) / 100;
       cells.push(
-        <rect key={`${r}-${c}`} x={40 + c * 42} y={30 + r * 42} width="36" height="36" rx="6" fill={heat > 0.55 ? M : P} opacity={heat > 0.55 ? 0.1 + heat * 0.15 : 0.12 + (1 - heat) * 0.3} />,
+        <rect key={`${r}-${c}`} x={40 + c * 42} y={30 + r * 42} width="36" height="36" rx="6" fill={heat > 0.55 ? M : P} opacity={(heat > 0.55 ? 10 + heat * 15 : 12 + (1 - heat) * 30).toFixed(0) + "%"} />,
       );
     }
   }
