@@ -12,7 +12,7 @@ export const site = {
   college: "Kongu Engineering College",
   available: true,
   // PLACEHOLDER — replace with your real email
-  email: "your.email@example.com",
+  email: "arulprakasam2023@gmail.com",
   // PLACEHOLDER — replace with your profile URLs
   linkedin: "https://www.linkedin.com/in/your-profile",
   github: "https://github.com/your-username",
