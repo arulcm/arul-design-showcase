@@ -15,7 +15,7 @@ export const site = {
   email: "arulprakasam2023@gmail.com",
   // PLACEHOLDER — replace with your profile URLs
   linkedin: "https://www.linkedin.com/in/your-profile",
-  github: "https://github.com/your-username",
+  github: "https://github.com/arulcm",
   behance: "https://www.behance.net/your-profile",
   resumeUrl: "/downloads/arulprakasam-cm-resume.pdf",
   resumeFileName: "Arulprakasam-CM-Resume.pdf",
