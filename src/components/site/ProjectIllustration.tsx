@@ -38,8 +38,6 @@ export function ProjectIllustration({
         className="relative h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
       >
         {visual === "fatigue" && <Fatigue />}
-        {visual === "brush" && <Brush />}
-        {visual === "thermal" && <Thermal />}
       </svg>
     </div>
   );
