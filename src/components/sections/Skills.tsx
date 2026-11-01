@@ -5,7 +5,7 @@ import { skillGroups } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const icons = [PenTool, Code2, Server, Terminal, Database, Wrench];
-const spans = ["md:col-span-4 md:row-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2"];
+const spans = ["md:col-span-4 md:row-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-8"];
 
 export function Skills() {
   return (

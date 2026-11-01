@@ -24,10 +24,12 @@ export function Reveal({ delay = 0, y = 32, children, ...rest }: RevealProps) {
 export function RevealWords({
   text,
   className,
+  wordClassName,
   delay = 0,
 }: {
   text: string;
   className?: string;
+  wordClassName?: string;
   delay?: number;
 }) {
   const reduce = useReducedMotion();
@@ -44,7 +46,7 @@ export function RevealWords({
       {words.map((w, i) => (
         <span key={i} className="inline-block overflow-hidden pb-[0.08em] align-top" aria-hidden>
           <motion.span
-            className="inline-block"
+            className={`inline-block ${wordClassName ?? ""}`}
             variants={{ hidden: { y: "110%" }, shown: { y: 0 } }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >

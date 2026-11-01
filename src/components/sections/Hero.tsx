@@ -32,9 +32,7 @@ export function Hero() {
             <h1 className="mt-10 text-[2.7rem] font-bold leading-[0.95] sm:text-6xl lg:text-[4.6rem]">
               <RevealWords text="DESIGNING DIGITAL EXPERIENCES." delay={0.3} />
               <br />
-              <span className="text-gradient-lime">
-                <RevealWords text="BUILDING WHAT MATTERS." delay={0.55} />
-              </span>
+              <RevealWords text="BUILDING WHAT MATTERS." delay={0.55} wordClassName="text-gradient-lime" />
             </h1>
 
             <motion.p

@@ -72,7 +72,7 @@ export function HeroVisual() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="glass float-slow absolute left-0 top-[16%] flex items-center gap-3 rounded-2xl px-4 py-3"
+          className="glass float-slow absolute -left-[8%] top-[6%] flex items-center gap-3 rounded-2xl px-4 py-3"
         >
           <span className="grid size-9 place-items-center rounded-xl bg-primary text-primary-foreground">
             <Zap className="size-4" />
