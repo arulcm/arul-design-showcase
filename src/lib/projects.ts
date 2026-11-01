@@ -1,8 +1,8 @@
-import achievements from "@/assets/habit/achievements.jpg.asset.json";
-import profile from "@/assets/habit/profile.jpg.asset.json";
-import focus from "@/assets/habit/focus.jpg.asset.json";
-import weekly from "@/assets/habit/weekly.jpg.asset.json";
-import heatmap from "@/assets/habit/heatmap.jpg.asset.json";
+import achievements from "@/assets/habit/achievements.jpg";
+import profile from "@/assets/habit/profile.jpg";
+import focus from "@/assets/habit/focus.jpg";
+import weekly from "@/assets/habit/weekly.jpg";
+import heatmap from "@/assets/habit/heatmap.jpg";
 
 export type Screenshot = {
   src: string;
@@ -41,7 +41,7 @@ export type Project = {
 
 export const habitScreens: Screenshot[] = [
   {
-    src: profile.url,
+    src: profile,
     alt: "Habit Tracker profile screen showing level, XP progress, sync status and stat tiles",
     category: "Profile & gamification",
     caption: "Level, XP progress, sync state and personal stats in one glance.",
@@ -49,7 +49,7 @@ export const habitScreens: Screenshot[] = [
     h: 1601,
   },
   {
-    src: focus.url,
+    src: focus,
     alt: "Focus Mode screen with a 45:00 timer and 25, 45, 60 and 90 minute session presets",
     category: "Focus Mode & Pomodoro",
     caption: "Four deep-work presets with a single, oversized timer.",
@@ -57,7 +57,7 @@ export const habitScreens: Screenshot[] = [
     h: 1601,
   },
   {
-    src: weekly.url,
+    src: weekly,
     alt: "Weekly Pulse statistics screen with today's completion, all-time done, total XP and a last 7 days bar chart",
     category: "Weekly statistics",
     caption: "Weekly Pulse — today, all-time and XP above a 7-day chart.",
@@ -65,7 +65,7 @@ export const habitScreens: Screenshot[] = [
     h: 1601,
   },
   {
-    src: heatmap.url,
+    src: heatmap,
     alt: "Monthly consistency heatmap for October 2026 with active days, total checks and daily streak card",
     category: "Monthly consistency heatmap",
     caption: "A GitHub-style heatmap turns a month of effort into a pattern.",
@@ -73,7 +73,7 @@ export const habitScreens: Screenshot[] = [
     h: 1601,
   },
   {
-    src: achievements.url,
+    src: achievements,
     alt: "Full-length profile capture listing achievement badges such as First Step, Week Warrior and Focus Master",
     category: "Achievements & progress",
     caption: "Full-length capture of the achievement badge wall — scroll inside the phone.",

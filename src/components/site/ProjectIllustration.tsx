@@ -1,5 +1,5 @@
 import brushImg from "@/assets/brushvault-concept.jpg";
-import thermalShot from "@/assets/shaderoute-map.png.asset.json";
+import thermalShot from "@/assets/shaderoute-map.png";
 import type { ProjectVisual } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 
@@ -17,7 +17,7 @@ export function ProjectIllustration({
   if (visual === "brush" || visual === "thermal") {
     const img = visual === "brush"
       ? { src: brushImg, label: "Concept render", alt: "Concept render of the BrushVault smart toothbrush dock with a lime UV ring" }
-      : { src: thermalShot.url, label: "Screenshot", alt: "ShadeRoute thermal navigator showing a shaded walking route through Hong Kong" };
+      : { src: thermalShot, label: "Screenshot", alt: "ShadeRoute thermal navigator showing a shaded walking route through Hong Kong" };
     return (
       <div className={cn("relative overflow-hidden rounded-3xl bg-surface", className)}>
         <span className="glass eyebrow absolute left-4 top-4 z-10 rounded-full px-3 py-1 text-[0.6rem]">{img.label}</span>
