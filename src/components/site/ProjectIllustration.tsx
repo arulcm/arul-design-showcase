@@ -1,3 +1,5 @@
+import brushImg from "@/assets/brushvault-concept.jpg";
+import thermalShot from "@/assets/shaderoute-map.png.asset.json";
 import type { ProjectVisual } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +14,17 @@ export function ProjectIllustration({
   visual: Exclude<ProjectVisual, "habit">;
   className?: string;
 }) {
+  if (visual === "brush" || visual === "thermal") {
+    const img = visual === "brush"
+      ? { src: brushImg, label: "Concept render", alt: "Concept render of the BrushVault smart toothbrush dock with a lime UV ring" }
+      : { src: thermalShot.url, label: "Screenshot", alt: "ShadeRoute thermal navigator showing a shaded walking route through Hong Kong" };
+    return (
+      <div className={cn("relative overflow-hidden rounded-3xl bg-surface", className)}>
+        <span className="glass eyebrow absolute left-4 top-4 z-10 rounded-full px-3 py-1 text-[0.6rem]">{img.label}</span>
+        <img src={img.src} alt={img.alt} loading="lazy" className="h-full w-full object-cover object-left-top transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+      </div>
+    );
+  }
   return (
     <div className={cn("relative overflow-hidden rounded-3xl bg-surface bg-grid", className)}>
       <div className="absolute inset-0 bg-radial-lime opacity-60" aria-hidden />
@@ -25,8 +38,6 @@ export function ProjectIllustration({
         className="relative h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
       >
         {visual === "fatigue" && <Fatigue />}
-        {visual === "brush" && <Brush />}
-        {visual === "thermal" && <Thermal />}
       </svg>
     </div>
   );
