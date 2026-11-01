@@ -12,11 +12,14 @@ export function PhoneMockup({
   className,
   onOpen,
   eager,
+  offset = 0,
 }: {
   shot: Screenshot;
   className?: string;
   onOpen?: () => void;
   eager?: boolean;
+  /** shift a tall image up (in % of its height) to frame a lower region */
+  offset?: number;
 }) {
   const ratio = shot.scroll ? "710 / 1601" : `${shot.w} / ${shot.h}`;
   return (
@@ -55,6 +58,7 @@ export function PhoneMockup({
             loading={eager ? "eager" : "lazy"}
             decoding="async"
             className="block h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+            style={offset ? { transform: `translateY(-${offset}%)` } : undefined}
           />
         )}
       </div>

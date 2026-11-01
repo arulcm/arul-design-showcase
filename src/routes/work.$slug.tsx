@@ -204,6 +204,7 @@ function HabitBody({ project }: { project: Project }) {
             >
               <PhoneMockup
                 shot={s.scroll ? { ...s, scroll: false, w: 710, h: 1601 } : s}
+                offset={s.scroll ? 40 : 0}
                 className="transition-transform duration-500 group-hover:-translate-y-2"
               />
               <p className="mt-4 font-mono text-[0.65rem] text-primary">{String(i + 1).padStart(2, "0")}</p>

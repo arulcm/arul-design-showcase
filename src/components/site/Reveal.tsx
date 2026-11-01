@@ -17,7 +17,10 @@ export function Reveal({ delay = 0, y = 32, children, ...rest }: RevealProps) {
   );
 }
 
-/** Splits a line into words that rise in one after another. */
+/**
+ * Splits a line into words that rise in one after another.
+ * The visible wrapper watches the viewport (the clipped words can't).
+ */
 export function RevealWords({
   text,
   className,
@@ -30,21 +33,26 @@ export function RevealWords({
   const reduce = useReducedMotion();
   const words = text.split(" ");
   return (
-    <span className={className} aria-label={text}>
+    <motion.span
+      className={className}
+      aria-label={text}
+      initial={reduce ? false : "hidden"}
+      whileInView="shown"
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.06, delayChildren: delay }}
+    >
       {words.map((w, i) => (
         <span key={i} className="inline-block overflow-hidden pb-[0.08em] align-top" aria-hidden>
           <motion.span
             className="inline-block"
-            initial={reduce ? false : { y: "110%" }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: delay + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
+            variants={{ hidden: { y: "110%" }, shown: { y: 0 } }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             {w}
             {i < words.length - 1 ? "\u00A0" : ""}
           </motion.span>
         </span>
       ))}
-    </span>
+    </motion.span>
   );
 }

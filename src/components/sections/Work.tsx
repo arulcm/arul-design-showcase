@@ -119,7 +119,8 @@ function FeaturedProject({ project }: { project: Project }) {
                 className="group/shot w-[200px] shrink-0 snap-start text-left sm:w-[230px]"
                 aria-label={`Enlarge screenshot: ${s.category}`}
               >
-                <PhoneMockup shot={s.scroll ? { ...s, scroll: false, w: 710, h: 1601 } : s} className="transition-transform duration-500 group-hover/shot:-translate-y-2" />
+                <PhoneMockup shot={s.scroll ? { ...s, scroll: false, w: 710, h: 1601 } : s}
+                offset={s.scroll ? 40 : 0} className="transition-transform duration-500 group-hover/shot:-translate-y-2" />
                 <p className="mt-4 font-mono text-[0.65rem] text-primary">{String(i + 1).padStart(2, "0")}</p>
                 <p className="mt-1 text-sm font-medium">{s.category}</p>
               </button>

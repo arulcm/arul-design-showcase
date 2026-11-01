@@ -83,7 +83,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="display-xl min-w-0 text-[13.2vw] xl:text-[10.4rem]"
+              className="display-xl min-w-0 whitespace-nowrap text-[9.6vw] xl:text-[7.9rem]"
             >
               ARULPRAKASAM <span className="text-outline">C M</span>
             </motion.p>
