@@ -1,13 +1,21 @@
-import { ArrowUpRight, Check, Copy, Download, Dribbble, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Check, Copy, Download, Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealWords } from "@/components/site/Reveal";
 import { site } from "@/lib/site";
 
+function BehanceMark({ className }: { className?: string }) {
+  return (
+    <span aria-hidden className={`${className ?? ""} inline-grid place-items-center font-display text-sm font-bold leading-none`}>
+      Bē
+    </span>
+  );
+}
+
 const socials = [
   { label: "LinkedIn", href: site.linkedin, icon: Linkedin },
   { label: "GitHub", href: site.github, icon: Github },
-  { label: "Behance", href: site.behance, icon: Dribbble },
+  { label: "Behance", href: site.behance, icon: BehanceMark },
 ];
 
 export function Contact() {
