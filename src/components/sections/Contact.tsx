@@ -42,9 +42,9 @@ export function Contact() {
           </p>
         </Reveal>
         <h2 className="mt-8 text-[2.6rem] font-bold leading-[0.92] sm:text-7xl lg:text-[7.5rem]">
-          <RevealWords text="HAVE A PROJECT IN MIND?" />
+          <RevealWords text="HAVE AN IDEA?" />
           <br />
-          <RevealWords text="LET'S CREATE SOMETHING GREAT." delay={0.25} wordClassName="text-gradient-lime" />
+          <RevealWords text="LET'S BUILD SOMETHING MEANINGFUL." delay={0.25} wordClassName="text-gradient-lime" />
         </h2>
 
         <Reveal delay={0.2}>

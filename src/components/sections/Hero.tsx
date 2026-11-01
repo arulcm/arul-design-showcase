@@ -42,7 +42,7 @@ export function Hero() {
               className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground"
             >
               I'm <span className="text-foreground">{site.shortName}</span> — a Computer Science student
-              passionate about creating intuitive interfaces and meaningful digital products.
+              passionate about designing intuitive digital experiences and developing meaningful products.
             </motion.p>
 
             <motion.div
@@ -53,7 +53,7 @@ export function Hero() {
             >
               <Button asChild variant="hero" size="xl">
                 <Link to="/" hash="work">
-                  View My Work <ArrowDownRight />
+                  Explore My Work <ArrowDownRight />
                 </Link>
               </Button>
               <Button asChild variant="pill" size="xl">
@@ -63,7 +63,7 @@ export function Hero() {
               </Button>
               <Button asChild variant="quiet" size="xl">
                 <Link to="/" hash="contact">
-                  Contact Me <ArrowUpRight />
+                  Let's Connect <ArrowUpRight />
                 </Link>
               </Button>
             </motion.div>
