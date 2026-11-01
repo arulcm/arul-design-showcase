@@ -20,7 +20,7 @@ export function Skills() {
 
         <div className="mt-20 grid gap-4 md:grid-cols-8">
           {skillGroups.map((g, i) => {
-            const Icon = icons[i];
+            const Icon = icons[i] ?? Wrench;
             const big = i === 0;
             return (
               <Reveal key={g.title} delay={i * 0.06} className={spans[i]}>

@@ -27,7 +27,7 @@ export function HeroVisual() {
     my.set((e.clientY - r.top) / r.height - 0.5);
   };
 
-  const focus = habitScreens[1];
+  const focus = habitScreens[1]!;
 
   return (
     <div

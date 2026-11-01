@@ -39,7 +39,7 @@ function CaseStudy() {
   const { slug } = Route.useLoaderData();
   const project = getProject(slug)!;
   const i = projects.findIndex((p) => p.slug === slug);
-  const next = projects[(i + 1) % projects.length];
+  const next = projects[(i + 1) % projects.length]!;
 
   return (
     <PageTransition key={slug}>
@@ -173,9 +173,9 @@ function HabitBody({ project }: { project: Project }) {
             <div className="absolute inset-0 bg-radial-lime" aria-hidden />
             <div className="absolute inset-0 bg-grid opacity-50" aria-hidden />
             <div className="relative flex items-end justify-center gap-4 px-6 pt-16 sm:gap-8 sm:pt-24">
-              <PhoneMockup shot={shots[2]} onOpen={() => setLb(2)} className="hidden w-[24%] max-w-[260px] translate-y-16 sm:block" />
-              <PhoneMockup shot={shots[0]} onOpen={() => setLb(0)} eager className="w-[62%] max-w-[330px] translate-y-6 sm:w-[30%]" />
-              <PhoneMockup shot={shots[3]} onOpen={() => setLb(3)} className="hidden w-[24%] max-w-[260px] translate-y-16 sm:block" />
+              <PhoneMockup shot={shots[2]!} onOpen={() => setLb(2)} className="hidden w-[24%] max-w-[260px] translate-y-16 sm:block" />
+              <PhoneMockup shot={shots[0]!} onOpen={() => setLb(0)} eager className="w-[62%] max-w-[330px] translate-y-6 sm:w-[30%]" />
+              <PhoneMockup shot={shots[3]!} onOpen={() => setLb(3)} className="hidden w-[24%] max-w-[260px] translate-y-16 sm:block" />
             </div>
           </div>
         </Reveal>
@@ -224,7 +224,7 @@ function HabitBody({ project }: { project: Project }) {
 
           <div className="mt-20 space-y-28">
             {withShot.map((f, idx) => {
-              const s = shots[f.shot!];
+              const s = shots[f.shot!]!;
               return (
                 <div key={f.title} className="grid items-center gap-12 md:grid-cols-12">
                   <Reveal className={cn("md:col-span-5", idx % 2 ? "md:order-2 md:col-start-8" : "")}>

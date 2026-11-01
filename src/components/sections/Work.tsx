@@ -27,7 +27,7 @@ export function Work() {
           }
         />
         <div className="mt-20">
-          <FeaturedProject project={featured} />
+          {featured && <FeaturedProject project={featured} />}
         </div>
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           {rest.map((p, i) => (
