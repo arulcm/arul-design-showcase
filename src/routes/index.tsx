@@ -1,24 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PageTransition } from "@/components/site/PageTransition";
+import { Hero } from "@/components/sections/Hero";
+import { Marquee } from "@/components/sections/Marquee";
+import { About } from "@/components/sections/About";
+import { Work } from "@/components/sections/Work";
+import { Process } from "@/components/sections/Process";
+import { Skills } from "@/components/sections/Skills";
+import { Journey } from "@/components/sections/Journey";
+import { Contact } from "@/components/sections/Contact";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Arulprakasam C M — UI/UX Designer & Frontend Developer" },
+      {
+        name: "description",
+        content:
+          "Designing digital experiences, building what matters. Selected work, design process and skills of Arulprakasam C M.",
+      },
+      { property: "og:title", content: "Arulprakasam C M — UI/UX Designer & Frontend Developer" },
+      {
+        property: "og:description",
+        content: "Designing digital experiences, building what matters. Selected UI/UX and frontend work.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <PageTransition>
+      <Hero />
+      <Marquee />
+      <About />
+      <Work />
+      <Process />
+      <Skills />
+      <Journey />
+      <Contact />
+    </PageTransition>
   );
 }
